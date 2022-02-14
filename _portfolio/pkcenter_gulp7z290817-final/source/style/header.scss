@@ -1,0 +1,286 @@
+header {
+	background: url(../img/header-bg.jpg) center no-repeat;
+	background-size: cover;
+	min-height: 656px;
+	position: relative;
+}
+header {
+	.wrap {
+		position: relative;
+		height: 655px;
+		border-top: 1px solid transparent;
+	}
+	.side-menu {
+		max-width: 335px;
+		height: 100%;
+		background-color: rgb(113, 44, 145);
+		position: fixed;
+		left: 0;
+		z-index: 22;
+		display: none;
+
+		.close-menu{
+			display: block;
+			position: absolute;
+			width:50px;
+			height:50px;
+			top:0;
+			right:0;
+			padding: 0;
+			cursor: pointer;
+			background: url(../img/close.svg) center no-repeat;
+		}
+		ul {
+			list-style: none;
+			margin: 40px 0 0;
+			padding: 0;
+
+			:first-child a {
+				padding-top: 0;
+			}
+			:nth-last-child(2) a {
+				margin-bottom: 25px;
+			}
+			:nth-last-child(1) a {
+				margin-top: 30px;
+				/*border-top: 1px solid yellow;*/
+				color: yellow;
+			}
+			li:last-child {
+				border-top: 1px solid yellow;
+			}
+		}
+		li {
+			padding: 0 40px;
+		}
+		a {
+			display: block;
+			color: white;
+			text-decoration: none;
+			width: 100%;
+			padding: 10px 0 15px;
+		}
+		a:hover {
+			color: yellow;
+		}
+	}
+	.side-menu.action {
+		display: block;
+		width: 310px;
+	}
+	nav {
+		width: 100%;
+		/*min-width: 960px;*/
+		min-height: 42px;
+		margin-top: 40px;
+		/*background: rgba(225,10,0, .2);*/
+		position: absolute;
+	}
+//	a.logo {
+///*		position: absolute;
+//		left: 50%;
+//		margin: 0;
+//		margin-left: -(538px/2);*/
+//		position: relative;
+//		display: block;
+//		margin: 0 auto;
+//		max-width: 538px;
+//		height: auto;
+//		margin-top: 108px;
+//		/*background: url(../img/logo.png) center / contain no-repeat;*/
+//	}
+//	.logo img {
+//		max-width: 100%;
+//		height: auto;
+//	}
+	p {
+		max-width: 450px;
+		margin: 0 auto;
+		margin-top: 33px;
+		color: white;
+		text-align: center;
+		font-size: 18px;
+		white-space: pre-line;
+	}
+	p span {
+		color: yellow;
+	}
+	button,
+	.btn {
+		display: block;
+		width: 300px;
+		height: 81px;
+		border-radius: 40px;
+		margin: 33px auto 0;
+		border: none;
+		background-color: #ffff00;
+		color: #712c91;
+	}
+	.btn {
+		text-align: center;
+		vertical-align: middle;
+		text-decoration: none;
+		height: auto;
+		padding: 30px 0;
+	}
+}
+
+nav {
+	a {
+		display: inline-table;
+		height: auto;
+		padding: 0 0 0 0px;
+		color: white;
+		font-family: "Core Rhino 65 Bold";
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 19px;
+		text-transform: uppercase;
+		text-decoration: none;
+		vertical-align: middle;
+		white-space: nowrap;
+		position: relative;
+	}
+	img {
+		margin-right: 12px;
+		vertical-align: middle;
+	}
+	.menu {
+		color: #ff0;
+		/*padding-left: 49px;*/
+		/*background: url(../img/icon-menu.png) left center no-repeat;*/
+	}
+	.adres {
+		white-space: pre;
+		margin-left: 18.8%;/*220px*/
+		padding-left: 10px;
+	}
+	.adres:before {
+		content: '';
+		position: absolute;
+		width: 28px;
+		height: 41px;
+		background: url(../img/icon-map.png) no-repeat;
+		left: -28px;
+		top: -2px;
+	}
+	.tel {
+		margin-left: 23%; /*270px*/
+	}
+	.soc {
+		display: inline-table;
+		float: right;
+	}
+	.soc:after {
+		display:table;
+		clear: both;
+	}
+	.soc a {
+		/*text-align: right;*/
+		/*float: right;*/
+		width: 38px;
+		height: 38px;
+		margin: 2px 0 0 7px;
+	}
+	.vk {
+		background: url(../img/icon-vk.svg) no-repeat;
+	}
+	.in {
+		background: url(../img/icon-in.svg) no-repeat;
+	}
+}
+
+.header-min {
+	min-height: 491px;
+	height: 491px;
+	background: url(../img/header-bg-min.png) center no-repeat;
+
+	p, button {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 821px) and (max-width: 960px) {
+	header{
+		nav .adres,
+		nav .tel,
+		nav .menu {
+			margin: 0 30px;
+		}
+	}
+}
+
+@media screen and (min-width: 961px) and (max-width: 1170px) {
+	header{
+		nav .adres,
+		nav .tel,
+		nav .menu {
+			margin: 0 50px;
+		}
+	}
+}
+
+@media screen and (max-width: 620px) {
+	header{
+	
+
+		.menu {
+			margin: 0;
+		}
+		button {
+			width: auto;
+			padding: 0 10%;
+		}
+	}
+}
+
+@media screen and (max-width: 820px) {
+	header{
+		p {
+			white-space: normal;
+		}
+		.menu {
+			font-size: 0;
+		}
+		nav img, nav a {
+			margin: 0;
+		}
+
+		.adres,
+		.tel,
+		.soc {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.header-min {
+		min-height: 330px;
+		height: 330px;
+		background-size: inherit;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	header a {
+		margin-top: 80px;
+	}
+	.side-menu a {
+		margin: 0;
+	}
+}
+
+header {
+	.close {
+		position: absolute;
+		top: 0;
+		left: 310px;
+		/*right: 0;*/
+		height: 100%;
+		width: 600%;
+		background: rgba(0,0,0, .5);
+		z-index: -1;
+	}
+}
+

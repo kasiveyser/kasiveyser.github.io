@@ -1,0 +1,28 @@
+.wrapper {
+    overflow: hidden;
+}
+
+.diorama__wrapper {
+    position: relative;
+    width: 10000px;
+    height: 500px;
+}
+.diorama__wrapper::after {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.diorama__row {
+    position: absolute;
+    float: left;
+    margin: auto;
+}
+
+.diorama__item {
+    float: left;
+    margin: 20px;
+}
